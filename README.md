@@ -1,32 +1,22 @@
-# TP-Inversion-Controle-SD
+# TP Inversion de Controle
 
-\# Compte Rendu : Inversion de Contrôle et Injection des Dépendances
+Ce projet implemente le TP d'inversion de controle et d'injection des dependances avec Java et Spring.
 
+## Contenu
 
+- `dao.IDao` avec la methode `getData()`
+- `dao.DaoImpl` comme implementation DAO
+- `metier.IMetier` avec la methode `calcul()`
+- `metier.MetierImpl` basee sur un couplage faible via l'interface `IDao`
 
-\## Introduction
+## Injections des dependances
 
-Ce TP présente les concepts de couplage faible et d'Inversion de Contrôle (IoC).
+- `pres.Pres1` : instanciation statique
+- `pres.Pres2` : instanciation dynamique avec reflection et `config.txt`
+- `pres.PresSpringXML` : injection avec Spring XML
+- `pres.PresSpringAnnotations` : injection avec Spring annotations
 
+## Configuration Spring
 
-
-\## Structure du projet
-
-\- \*\*dao\*\* : Interface IDao et implémentation DaoImpl.
-
-\- \*\*metier\*\* : Interface IMetier et implémentation MetierImpl.
-
-\- \*\*pres\*\* : Classes de test pour les différentes méthodes d'injection.
-
-
-
-\## Injections réalisées
-
-\- \*\*Statique\*\* : Injection manuelle via le constructeur/setter.
-
-\- \*\*Dynamique\*\* : Utilisation de la réflexion Java et d'un fichier `config.txt`.
-
-\- \*\*Spring XML\*\* : Configuration via `config.xml`.
-
-\- \*\*Spring Annotations\*\* : Utilisation de `@Component` et `@Autowired`.
-
+- `src/main/resources/config.xml` contient la configuration XML
+- `@Component` et `@Autowired` sont utilises pour la version annotations
