@@ -1,6 +1,7 @@
 # TP Inversion de Controle
 
 Ce projet implemente le TP d'inversion de controle et d'injection des dependances avec Java et Spring.
+<img width="545" height="526" alt="image" src="https://github.com/user-attachments/assets/e2ee2df2-2784-47b4-8693-63664159a68c" />
 
 ## Contenu
 
